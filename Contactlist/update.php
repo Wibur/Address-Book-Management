@@ -16,7 +16,7 @@ mysql_select_db($dbname);
  $Address = $_REQUEST['address'];
  $Email = $_REQUEST['email'];
 
-$S=str_replace("'","\'",$Address);//good function!!!
+$S=str_replace("'","\'",$Address);//取代特殊符號!!!
 
 $sql_update = "UPDATE contactlist
 SET name='$Name',gender='$Gender',phone='$Phone',birthday='$Birthday',address='$S',email='$Email'
@@ -24,7 +24,7 @@ SET name='$Name',gender='$Gender',phone='$Phone',birthday='$Birthday',address='$
 
 
 $result = mysql_query($sql_update) or die('MySQL insert error');
-$sql_query = "select * from contactlist";
+//$sql_query = "select * from contactlist";
 
 
   // while($row = mysql_fetch_array($result))
